@@ -1,5 +1,6 @@
 import './style.css'
 import menuIcon from '../../img/Hamburger Menu.svg'
+import Button from '../button'
 import {useState} from 'react'
 
 
@@ -21,7 +22,7 @@ function Header() {
                 <li className='nav-item'><a href="#" className='nav-link'>About</a></li>              
             </ul>
             <div className='menu' onClick={HandleToggle}><img src={menuIcon} alt="Menu" /></div>
-            <div className='contact'><a href="#" className='btn'>Get in touch</a></div>
+            <Button href='google.com'>Get in touch</Button>
         </header>
     )
 }

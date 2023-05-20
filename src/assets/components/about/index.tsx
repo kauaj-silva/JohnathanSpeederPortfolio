@@ -1,4 +1,3 @@
-import './style.css'
 import { AboutSection, AboutContainer } from './style'
 
 function About() {
