@@ -1,20 +1,20 @@
 import github from '../../img/social icons/Github.svg'
 import linkedin from '../../img/social icons/LinkedIn.svg'
 import twitter from '../../img/social icons/Twitter.svg'
-import './style.css'
+import {FooterContent, FooterSocial} from './style'
 
 function Footer() {
     const socialMedias = [twitter,linkedin,github]
 
     return(
-        <footer>
+        <FooterContent>
             <div className="logo"><h2>Johnathan Speeder</h2></div>
-            <div className="socialmedias">
+            <FooterSocial>
                 {
                     socialMedias.map((icons) => <img src={icons} alt=""/>)
                 }
-            </div>
-        </footer>
+            </FooterSocial>
+        </FooterContent>
     )
 }
 
