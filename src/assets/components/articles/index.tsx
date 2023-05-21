@@ -7,17 +7,20 @@ import Visa from '../../img/logos/Visa.svg'
 import Walmart from '../../img/logos/Walmart.svg'
 import spense from '../../img/Spense.png'
 import yeldcamp from '../../img/YelpCamp.png'
+import {BsArrowRight} from 'react-icons/bs'
+import { ArticleContainer1, ArticleContainerIcons, ArticleContainerImgs } from './styles'
+
+
 
 function Articles() {
 
     function Article1() {
         return (
-            <section className='main'>
+            <ArticleContainer1>
                 <h2>Helping Companies build better, scalable software.</h2>
-                <p className='p'>Award-winning web developer and author, with over 15+ years of working experience
-                    with Fortune 500 companies like Apple, Google, Facebook and more.
-                </p>
-            </section>
+                <p>Award-winning web developer and author, with over 15+ years of working experience
+                    with Fortune 500 companies like Apple, Google, Facebook and more.</p>
+            </ArticleContainer1>
         )
     }
     // Icones
@@ -26,9 +29,9 @@ function Articles() {
         const icones = [Walmart, Tinder, jpMorgan, Visa, Samsung, Verizon];
 
         return (
-            <section className='icons'>
+            <ArticleContainerIcons>
                 {icones.map(icone => <img src={icone} alt='icon' className='icon'></img>)}
-            </section>
+            </ArticleContainerIcons>
         );
 
     }
@@ -53,19 +56,19 @@ function Articles() {
         }
 
         return (
-            <section className='awards'>
+            <ArticleContainerImgs >
                 {Object.values(articleimages).map(content => (
                     <div className='imgdiv'>
                         {content.map(article => (
                             <div>
                                 <img src={article.src} alt="images" />
-                                <h2>{article.title} --</h2>
+                                <h2>{article.title} <BsArrowRight /> </h2>
                                 <p>{article.content}</p>
                             </div>
                         ))}
                     </div>
                 ))}
-            </section>
+            </ArticleContainerImgs>
         );
     }
 
